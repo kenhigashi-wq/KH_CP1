@@ -14,3 +14,4 @@ average = total / 7
 print("Your average grade is", round(average, 2),"percent.")
 round(average, 2)
 #round function rounds to the nearest whole number unless you specify the number of decimal places you want to round to.
+#change
