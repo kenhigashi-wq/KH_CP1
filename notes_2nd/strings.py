@@ -37,4 +37,3 @@ print(full_name)
 # Slice
 print(last_name[2:6])
 
-string[start index: end index]

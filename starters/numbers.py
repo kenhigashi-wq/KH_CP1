@@ -1,3 +1,4 @@
+#KH 2nd numbers
 # Value is 5, 10, 0, 42
 import random
 import time

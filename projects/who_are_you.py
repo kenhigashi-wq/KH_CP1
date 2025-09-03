@@ -1,4 +1,4 @@
-# KH who_are_you,py
+# KH 2nd who_are_you,py
 name = input("Whats your name?: ")
 age = input("Whats your age?: ")
 color = input("Whats your favorite color?: ")
