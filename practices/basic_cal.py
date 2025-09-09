@@ -15,16 +15,15 @@ num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 answer = (input("Enter the operation (+, -, *, /, **, %, //): "))
 if answer == "+":
-    print(f"{num1} + {num2} = {float(num1 + num2, 2)}")
+    print(f"{num1} + {num2} = {(num1 + num2):.2f}")
 elif answer == "-":
-    print(f"{num1} - {num2} = {float(num1 - num2, 2)}")
+    print(f"{num1} - {num2} = {(num1 - num2):.2f}")
 elif answer == "*":
-    print(f"{num1} * {num2} = {float(num1 * num2, 2)}")
+    print(f"{num1} * {num2} = {(num1 * num2):.2f}")
 elif answer == "/":
-    print(f"{num1} / {num2} = {float(num1 / num2, 2)}")
+    print(f"{num1} / {num2} = {(num1 / num2):.2f}")
 elif answer == "**":
-    print(f"{num1} ** {num2} = {float(num1 ** num2, 2)}")
-elif answer == "%":
-    print(f"{num1} % {num2} = {float(num1 % num2, 2)}")
+    print(f"{num1} ** {num2} = {(num1 ** num2):.2f}")
+    print(f"{num1} % {num2} = {(num1 % num2):.2f}")
 elif answer == "//":
-    print(f"{num1} // {num2} = {float(num1 // num2, 2)}")
+    print(f"{num1} // {num2} = {(num1 // num2):.2f}")
