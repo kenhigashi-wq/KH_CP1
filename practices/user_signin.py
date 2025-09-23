@@ -3,15 +3,9 @@
 username = input("what is your user name: ")
 password = input("what is your password: ")
 
-setusername = "kensei"
-setpassword = "123"
 
 # The username stuff
-if username == setusername:
+if username == "kensei" and password == "123":
     print(f"Welcome {username}!")
 else: 
-    print("You didn't succesfully sign in") # else wrong
-if password == setpassword:
-    print(f"your password is correct")
-else:
     print("You didn't succesfully sign in") # else wrong
