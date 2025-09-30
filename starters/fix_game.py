@@ -6,7 +6,7 @@ def start_game():
     print("I'm thinking of a number between 1 and 100.")
     number_to_guess = random.randint(1, 100)
     max_attempts = 10
-    attempts = 0
+    attempts += 1 # inside the loop thing after the thing goes into the good guess, you know what I mean?
     game_over = False
     while not game_over:
         guess = input("Enter your guess: ")
@@ -21,6 +21,5 @@ def start_game():
             print("Too low! Try again.")
         elif guess > number_to_guess:
             print("Too high! Try again.")  
-        continue
-    print("Game Over. Thanks for playing!")
+      # Apparently we don't need that since we don't need to continue
 start_game()
