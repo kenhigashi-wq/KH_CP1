@@ -10,3 +10,14 @@ for num in nums:
         print(num)
 
 print("We completed all numbers!")
+
+for x in range(1,10):
+    print(x)
+
+print("new list")
+
+for x in range(2,11,2):
+    print(x)
+
+for x in range(10,0):
+    print(x)
