@@ -28,7 +28,9 @@ while True:
                 print(f"{i}. {task}")
         else:
             print("list is empty")
-   
+    
         
     elif action == "4":
         break
+    else:
+        print("That shouldn't happen. Try something else")
