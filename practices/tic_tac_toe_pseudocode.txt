@@ -1,0 +1,26 @@
+#KH 2nd tic_tac_toe_pseudocode.txt practice computer_word
+
+START
+# Import random module
+# Initialize player and computer scores to 0
+# Set the board by setting x in range
+#Then add the numbers 1,2,3,4,5,6,7,8,9
+#   Main game loop
+while True:
+    #Ask the player to input their choice (1,2,3,4,5,6,7,8,9)
+    # Also set the variable for the choices so you can set the conditional. Very IMPORTANT
+    #While the input is not valid (not 1,2,3,4,5,6,7,8,9):
+        #Ask the player to input a valid choice
+
+    # Use random.choice to select computer's choice from [1,2,3,4,5,6,7,8,9]
+    # If choice varaicle is crossing with computer choice make the computer repeat the process above
+    #Print players choice
+    # After printing players choice, print computers choice.
+    # If Player choices line up with given numbers print "You win!"
+    # If Computer choices do correlate print "You Lose!"
+    # Else print "It's a tie!"
+    # Print current scores
+    # Ask if player wants to play again
+    #if not, break loop
+    
+# print final scores
