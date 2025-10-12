@@ -1,41 +1,73 @@
-# KH password strentgh checker project
+# KH, period , password checker 
 
+# Ask the user for a password
+password = input("Enter a password: ")
 
+# Start score at 0
+score = 0
 
-#Define the integer. (:
-num = "1","2","3","4","5","6","7","8","9","0"
-#Define the special character
-spec = "!","@","#","$","%","^","&","*","(",")","_","+","-","=","[","]","{","}","|",";",":",".","<",">","?"
-#define the upper case
-lower = "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"
-#define uppercase
-upper = "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"
+# Check if password is at least 8 characters
+if len(password) >= 8:
+    print("Length (8+ characters): Yes")
+    score += 1
+else:
+    print("Length (8+ characters): No")
 
+# Check for uppercase letters
+upper = False
+for letter in password:
+    if letter >= 'A' and letter <= 'Z':
+        upper = True
+if upper:
+    print("Contains uppercase: Yes")
+    score += 1
+else:
+    print("Contains uppercase: No")
 
-# Add a while true loop
-while True:
-# Add a password strength score
-    score = 0 
-# Add password input
-    password = input("Input your password")
-# Check for the length
-    if len(password) >= 8:
-#add score
-        score += 1
-#check for the number
-    if num(password) >= 1:
-#add score
-        score += 1
-#check for special letters
-    if spec(password) >= 1:
-#add score
-        score += 1
-#check for lower case
-    if lower(password) >= 1:
-#add score
-        score += 1
-# check for upper case
-    if upper(password) >= 1:
-#add score
-        score += 1
-    print(f"your score is {password}")
+# Check for lowercase letters
+lower = False
+for letter in password:
+    if letter >= 'a' and letter <= 'z':
+        lower = True
+if lower:
+    print("Contains lowercase: Yes")
+    score += 1
+else:
+    print("Contains lowercase: No")
+
+# Check for numbers
+has_number = False
+for letter in password:
+    if letter >= '0' and letter <= '9':
+        has_number = True
+if has_number:
+    print("Contains numbers: Yes")
+    score += 1
+else:
+    print("Contains numbers: No")
+
+# Check for special characters
+special = "!@#$%^&*()_+-=[]{}|;:,.<>?"
+has_special = False
+for letter in password:
+    if letter in special:
+        has_special = True
+if has_special:
+    print("Contains special characters: Yes")
+    score += 1
+else:
+    print("Contains special characters: No")
+
+# Show score
+print()
+print("Strength score:", score, "/ 5")
+
+# Give feedback
+if score <= 2:
+    print("Password strength: Weak")
+elif score == 3:
+    print("Password strength: Moderate")
+elif score == 4:
+    print("Password strength: Strong")
+elif score == 5:
+    print("Password strength: Very Strong")
