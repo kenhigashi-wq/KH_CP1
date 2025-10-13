@@ -7,24 +7,30 @@ password = input("Enter a password: ")
 score = 0
 
 # Check if password is at least 8 characters
+# print yes or no and print yes if valid and add point
 if len(password) >= 8:
-    print("Length (8+ characters): Yes")
-    score += 1
+    print("Length (8+ characters): Yes") # print yes or no 
+    score += 1 # add point if yes
 else:
-    print("Length (8+ characters): No")
+    print("Length (8+ characters): No") # print yes or no
 
 # Check for uppercase letters
+# print yes or no and print yes if valid and add point
+# do variable equals flase for every thing
+# do if for everything
 upper = False
 for letter in password:
     if letter >= 'A' and letter <= 'Z':
         upper = True
 if upper:
-    print("Contains uppercase: Yes")
+    print("Contains uppercase: Yes") # print yes or no 
     score += 1
 else:
     print("Contains uppercase: No")
 
 # Check for lowercase letters
+# print yes or no and print yes if valid and add point
+
 lower = False
 for letter in password:
     if letter >= 'a' and letter <= 'z':
@@ -36,6 +42,8 @@ else:
     print("Contains lowercase: No")
 
 # Check for numbers
+# print yes or no and print yes if valid and add point
+
 has_number = False
 for letter in password:
     if letter >= '0' and letter <= '9':
@@ -47,6 +55,8 @@ else:
     print("Contains numbers: No")
 
 # Check for special characters
+# print yes or no and print yes if valid and add point
+
 special = "!@#$%^&*()_+-=[]{}|;:,.<>?"
 has_special = False
 for letter in password:
@@ -59,7 +69,7 @@ else:
     print("Contains special characters: No")
 
 # Show score
-print()
+print("-------------------------------")
 print("Strength score:", score, "/ 5")
 
 # Give feedback
