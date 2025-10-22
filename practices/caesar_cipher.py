@@ -3,7 +3,7 @@
 print(f"a = {ord("a")}")
 print(f"100 = {chr(100)}")
 
-# make function
+# make function for the cipher
 def caesar_cipher(text, shift, mode):
     result = ""
     for char in text:
@@ -21,17 +21,19 @@ def caesar_cipher(text, shift, mode):
             result += char
     return result
 
-
+# set message var
 message = input("Enter your message: ")
+#set the key var
 key = int(input("Enter shift key: "))
+#set the opertion var
 op = input("Choose operation (1 for encode, 2 for decode): ")
     
-
+# make the option thing
 if op == "1":
     encrypted_message = caesar_cipher(message, key, 'encrypt')
     print(f"Encrypted message: {encrypted_message}")
-elif op == "2":
+elif op == "2":# do it for decode too
     decrypted_message = caesar_cipher(message, key, 'decrypt')
     print(f"decrypted message: {decrypted_message}")
-else:
+else:# make else statement
     print("Invalid: Try again")
