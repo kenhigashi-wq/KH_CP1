@@ -8,13 +8,13 @@ def caesar_cipher(text, shift, mode):
     result = ""
     for char in text:
         if char.isalpha():
-            start = ord('a') if char.islower() else ord('A')
-            if mode == "encrypt":
-                shifted_code = (ord(char) - start + shift) % 26 + start 
-            elif mode == "decrypt":
-                 shifted_code = (ord(char) - start - shift) % 26 + start 
-            else:
-                return "invalid. Try again"
+            start = ord('a') if char.islower() else ord('A')# checks if upper case
+            if mode == "encrypt":# checks if encrypt and then encyptes
+                shifted_code = (ord(char) - start + shift) % 26 + start # does the thing 
+            elif mode == "decrypt":# same thing
+                 shifted_code = (ord(char) - start - shift) % 26 + start # also smae thing
+            else:# else statment
+                return "invalid Try again"
 
             result += chr(shifted_code)
         else:
