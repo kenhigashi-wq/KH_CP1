@@ -11,8 +11,5 @@ print(f"result is {add(1,1)}")
 total = add(1,1)
 print(add(add(12,23)))
 
-
-def initials(name):
-    names  name.split(" ")
-    initial = ""            
-    for name in names 
+def attack(dmg, target):
+    return player_hp - damage
