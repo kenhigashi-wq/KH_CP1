@@ -19,3 +19,6 @@ board = [[1,2,3],
          [7,8,9]]
 board[1][1] = "X"
 print(board)
+from colorama import Fore, Style
+
+print(Fore.RED + "This text is red." + Style.RESET_ALL)
