@@ -52,9 +52,9 @@ def whowon(turtles):
     return False
 # Checking who won
 turtlist = setup()
-win=False
+win = False
 while not win:
-    turtlist=race(turtlist)
-    win=whowon(turtlist)
+    turtlist = race(turtlist)
+    win = whowon(turtlist)
 print(f'The {win} turtle won!')
 turtle.done()
