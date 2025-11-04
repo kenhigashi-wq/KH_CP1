@@ -4,18 +4,22 @@ import random
 
 # Function for making the structual maze1
 def maze_generator(width, height):
-    
+    pass
 
 # Function for drawing maze
+
 def drawmaze():
+    screen = turtle.Screen()
+    screen.setup(width=600, height=600)  
+    screen.tracer(0) 
+    pen = turtle.Turtle()
+    pen.speed(0)
+    pen.hideturtle()
+    pen.penup()
     turtle = turtle.Turtle()
     turtle.size = 0
     turtle.pensize(0)
-    for i in maze:
-        for x in i:
-            if x == 1:
-                turtle.startfill()
-
+    
 
 
 
