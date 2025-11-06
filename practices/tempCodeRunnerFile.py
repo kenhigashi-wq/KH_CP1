@@ -1,6 +1,10 @@
-# Set the indivisual guys
-    t1.teleport(250,250)
-    t1.left(100)
-    t1.forward(400)
-    t1.right(100)
-    return [t1,t2,t3,t4,t5]
+def maze_generator():
+    maze = [[],[],[],[],[]]
+    for c in maze:
+        for i in range(6):
+            c.append(random.randint(0,1))
+    maze2=[[],[],[],[],[]]
+    for r in maze2:
+        for i in range(6):
+            r.append(random.randint(0,1))
+    return maze,maze2
