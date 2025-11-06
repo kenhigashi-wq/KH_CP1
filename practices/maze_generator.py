@@ -75,11 +75,11 @@ def checkmaze(row_grid, col_grid):
     done=[]# var for the done stuff
     stack=[(0,0)]# var for the stacking stuff
     while stack:# while stack 
-        item=random.choice(stack)
+        item=random.choice(stack)#Randomly choosing from the stack to so the next thing.
         if item==(5,5):# checking if the maze is sovable with the appending thing and just moving ot the next thing.
             return True
-        x,y=item[0],item[1]
-        if x<5 and col_grid[x][y]==0:
+        x,y=item[0],item[1]#setting the x and y for the chosen item
+        if x<5 and col_grid[x][y]==0:#All four are checking for adjacent walls. And if there are none and adding square beyond to stack
             stack.append((x+1,y))
         if y<5 and row_grid[y][x]==0:
             stack.append((x,y+1))
@@ -87,8 +87,8 @@ def checkmaze(row_grid, col_grid):
             stack.append((x-1,y))
         if y>1 and row_grid[y-1][x]==0:
             stack.append((x,y-1))
-        done.append(item)
-        for i in done:
+        done.append(item)#Adding the item that the thing just did/checked to done.
+        for i in done:# removing everything in done from stack.
             if i in stack:
                 stack.remove(i)
     return False
