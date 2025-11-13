@@ -1,40 +1,63 @@
-#KH 2nd period, order up practice project
+# KH - 2nd Period - Order Up Practice Project
 
-#Set menu as dictionary containing dictionarie for the foods
-#loop thru dictionary
-whole_menu = {
+# Menu dictionary
+menu = {
     'drink': {
-        'soda': 2.05,
-        'water': 2.05,
-        'fizzy water': 5.00,
-        'mud': 100.05
+        'Coke': 2.05,
+        'Water': 2.05,
+        'Fizzy Water': 5.00,
+        'Mud': 100.05
     },
-    'Main course': {
-        'Porter house T-bone': 33.99,
+    'main course': {
+        'Burger': 8.99,
         'Ribeye': 26.55,
         'Sirloin': 16.49,
-        'BBQ Chicken Sandwich': 16.49,
+        'BBQ Chicken Sandwich': 16.49
     },
     'side dishes': {
+        'Fries': 3.99,
+        'Salad': 4.50,
         'Baked Potato': 5.59,
-        'Butterd corn': 6.69,
-        'House Salad': 7.98,
-        'Steak Fries': 6.98,
-    },
+        'Corn': 3.49
+    }
 }
-# Display menu
-for key, value in whole_menu.items():
-    print(f"{key}: {value}")
 
-#functions for ordering
-def order()
-#Function for calculating price
+# Display full menu
+print("=== MENU ===")
+for category, items in menu.items():
+    print(f"\n{category.capitalize()}:")
+    for item, price in items.items():
+        print(f"  {item} - ${price:.2f}")
 
-#Set drink to input
-#Set Main course to input
-#Set side dishes as input.
-#Functions for calling\
+# Function to validate user input
+def get_valid_choice(category, options):
+    while True:
+        choice = input(f"\nChoose your {category} ({', '.join(options)}): ").strip()
+        if choice in options:
+            return choice
+        else:
+            print("Invalid choice. Please try again.")
 
-#call for the menue
-#Make input for each food category
+# Take order
+print("\n=== Place Your Order ===")
+drink = get_valid_choice("drink", menu['drink'].keys())
+main_course = get_valid_choice("main course", menu['main course'].keys())
 
+# Two side dishes
+side1 = get_valid_choice("first side dish", menu['side dishes'].keys())
+side2 = get_valid_choice("second side dish", menu['side dishes'].keys())
+
+# Calculate total
+total = (menu['drink'][drink] +
+         menu['main course'][main_course] +
+         menu['side dishes'][side1] +
+         menu['side dishes'][side2])
+
+# Display order 
+print("\n=== Your Order ===")
+print(f"Drink: {drink}")
+print(f"Main Course: {main_course}")
+print("Side Dishes:")
+print(f"  {side1}")
+print(f"  {side2}")
+print(f"\nTotal Cost: ${total:.2f}")
