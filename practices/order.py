@@ -39,7 +39,9 @@ def get_valid_choice(category, options):
             print("Invalid choice. Please try again.")
 
 # Take order
-print("\n=== Place Your Order ===")
+def place_order():
+    while True:
+        print("\n=== Place Your Order ===")
 drink = get_valid_choice("drink", menu['drink'].keys())
 main_course = get_valid_choice("main course", menu['main course'].keys())
 
