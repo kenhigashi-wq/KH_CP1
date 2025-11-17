@@ -45,6 +45,7 @@ def place_order():
 drink = get_valid_choice("drink", menu['drink'].keys())
 main_course = get_valid_choice("main course", menu['main course'].keys())
 
+
 # Two side dishes
 side1 = get_valid_choice("first side dish", menu['side dishes'].keys())
 side2 = get_valid_choice("second side dish", menu['side dishes'].keys())
