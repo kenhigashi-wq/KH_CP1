@@ -96,5 +96,4 @@ def main():
     
     print("\nThank you for using the Flexible Calculator!")
 
-if __name__ == "__main__":
-    main()
+main()
