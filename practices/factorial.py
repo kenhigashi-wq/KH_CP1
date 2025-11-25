@@ -8,7 +8,7 @@
 #Ask the user for a number
 #(k)If get numbers(num), print "Valid"
 #(k)else, print (invalid)
-# #And if not ask again
+#exit, if not valid
 #(k)make function for calculating the factorial stuff
 #(k)Set result to 1
 #(K)Loop throuh every num from 1 up to n
