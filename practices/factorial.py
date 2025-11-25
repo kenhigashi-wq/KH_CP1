@@ -25,21 +25,27 @@ def get_numbers(num):
             int(num)
             return True
     except ValueError:
-        
-        return False
+     print("False please try again")
+     return False
     
-num = int(input("Enter a number: "))
+num = input("Enter a number: ")
 
 if get_numbers(num):
-     print(f"{num} is valid")
+     print(f"{num} is a valid integer")
+     num = int(num)
 else:
      print(f"{num} is not valid")
+     exit()
 
 def factorial(n):
      result = 1
      for i in range(1, n + 1):
           result *= i
      return result
-     
+
+if num < 0:
+     print("invalid, please try again with a positive number.")
+else:
+     print("Input is a vaild, positive number")
 output = factorial(num)
 print(f"The factorial is:{output}")
