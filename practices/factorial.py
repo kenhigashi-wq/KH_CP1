@@ -18,6 +18,9 @@
 #(ken version)Make an empty list for the numbers
 #(k)Make output var with factorial(num)
 #Print factorial
+#Also before all that, make a negative checker.
+#if num is smaller then zero, print please try again.
+#else, say its a valid number.
 
 
 def get_numbers(num):
