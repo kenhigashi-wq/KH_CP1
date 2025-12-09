@@ -1,20 +1,26 @@
 #KH psuedocode practice
 
-#Ask the user for a number
 #Check what the user typed in is a number
 #(ken version) Make a function for checking it
 #(k) make empty list
 #(k)Make a try to check if its integer
 #(k)Except, ValueError
+#Ask the user for a number
 #(k)If get numbers(num), print "Valid"
-#(k)else, print (nvalid)
-# #And if not ask again
-# #Take the number and see what numbers are smaller then it makes it stop at one.
-#make a function that takes the number user put in and multiply it with the numbers
-#print output and input at same time
+#(k)else, print (invalid)
+#exit, if not valid
+#(k)make function for calculating the factorial stuff
+#(k)Set result to 1
+#(K)Loop throuh every num from 1 up to n
+#result = result * i or result *= i
+#return output
+#print output and input at same time(?)
 #(ken version)Make an empty list for the numbers
-#call for function
-
+#(k)Make output var with factorial(num)
+#Print factorial
+#Also before all that, make a negative checker.
+#if num is smaller then zero, print please try again.
+#else, say its a valid number.
 
 
 def get_numbers(num):
@@ -22,13 +28,27 @@ def get_numbers(num):
             int(num)
             return True
     except ValueError:
-        
-        return False
+     print("False please try again")
+     return False
     
-num = input("Enter a number: ")    
+num = input("Enter a number: ")
 
 if get_numbers(num):
-     print(f"{num} is valid")
+     print(f"{num} is a valid integer")
+     num = int(num)
 else:
      print(f"{num} is not valid")
+     exit()
 
+def factorial(n):
+     result = 1
+     for i in range(1, n + 1):
+          result *= i
+     return result
+
+if num < 0:
+     print("invalid, please try again with a positive number.")
+else:
+     print("Input is a vaild, positive number")
+output = factorial(num)
+print(f"The factorial is:{output}")
