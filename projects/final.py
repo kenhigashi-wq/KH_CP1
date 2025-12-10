@@ -4,6 +4,9 @@ player_speed = 500
 player_charm = .2
 player_msp = 0
 msp_goal = 500
+enemy_stats = {
+
+}
 #Inventory (Which is a dictionary)= {weapons: [], charm items: [], heal items: [], speed items: []}
 #Make a list for all items
 # rooms list = [kitchen, living room, bathroom, garage, Dining room, Hallway, Bedroom, library, Christmas tree room]
@@ -28,4 +31,10 @@ def win_game():
         print("You won the whole entire game! You home is peaceful, you now enjoy a cup of hot cocoa and relax")
 def room():
 
-def combat(enemy_health):
+def combat(enemy_name):
+    global player_health, player_strength, player_speed, player_charm, player_msp
+    stats = enemystats[enemy_name]
+    print(f"{enemy_name}, appears!")
+
+    while player_health > 0 and enemy_health > 0:
+        
