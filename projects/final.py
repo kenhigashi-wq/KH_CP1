@@ -11,7 +11,6 @@ player = {
 }
 
 msp_required = 500
-
 defeated = [None]
 
 inventory = {
@@ -83,13 +82,20 @@ def use_item():
         print("Player Strength increased by 100!")
 
 def charm(enemy_name):
-
+    print(f"Attempting to charm {enemy_name}...")
+    if random.random() < player["charm"]:
+        print(f"You succesfully charmed {enemy_name}! They are no longer a threat and leave your house.")
+        return True
+    else:
+        print(f"Charm failed! {enemy_name} is offended!")
+        return False
 def equip_item():
-
+    
 def main_func():
-
+    combat()
 def start_game():
-    print("The eggnog is spiked, the carols are off-key, and a horde of your beloved relatives has breached the perimeter of your house. This isn't a gathering; it's an invasion. \nYou’d hoped for a quiet December, maybe wearing sweatpants and watching bad reality TV. \nInstead, your personal sanctuary has become a war zone of awkward hugs, political arguments, and questionable casserole dishes. \nYour mission, should you choose to accept it, is to defend your turf and maintain your sanity. \nYou need to gather 500 MSP (Mental Stability Points) by successfully navigating conversations, surviving combat encounters, and generally avoiding total psychological collapse. \nYour journey begins in the relative safety of the Foyer. \nThe rest of your pristine home is already overrun. Lock and load your patience. \nMay the odds of a peaceful holiday season be ever in your favor.")
+    print("The eggnog is spiked, the carols are off-key, and a horde of your oh so beloved relatives has breached the perimeter of your house. This isn't a gathering; it's an invasion. \nYou’d hoped for a quiet December, maybe wearing sweatpants and watching bad reality TV. \nInstead, your personal sanctuary has become a war zone of awkward hugs, political arguments, and questionable casserole dishes. \nYour mission, should you choose to accept it, is to defend your turf and maintain your sanity. \nYou need to gather 500 MSP (Mental Stability Points) by successfully navigating conversations, surviving combat encounters, and generally avoiding total psychological collapse. \nYour journey begins in the relative safety of the Foyer. \nThe rest of your pristine home is already overrun. Lock and load your patience. \nMay the odds of a peaceful holiday season be ever in your favor.")
+    main_func()
 def change_room():
 
 def lose_game():
@@ -113,7 +119,6 @@ def win_game():
 def room():
 
 def combat(enemy_name):
-
     stats = enemy_stats[enemy_name]
     print(f"{enemy_name}, appears!")
 
@@ -134,7 +139,7 @@ def combat(enemy_name):
             if choice == "1":
                 if player["speed"] >= stats["speed"]:
                     hp-= player["strength"]
-                    print(f"You hit {enemy_name} for {player["strength"]} damage!")
+                    print(f"You hit {enemy_name} for {player['strength']} damage!")
                 else:
                     print(f"{enemy_name} was faster than you")
             elif choice == "2":
@@ -146,7 +151,7 @@ def combat(enemy_name):
                         return True
                     else:
                         player["health"] -= stats["dmg"]
-                        print(f"{enemy_name} attacks! -{stats["dmg"]} HP")
+                        print(f"{enemy_name} attacks! -{stats['dmg']} HP")
             elif choice == "3":
                 use_item()
             elif choice == "4":
@@ -162,5 +167,4 @@ def combat(enemy_name):
             attack = random.choice(enemy_attacks[enemy_name])
             print(f"{enemy_name} uses {attack}!")
             player["health"] -= stats["dmg"]
-
-            
+            print(f"Player HP:{player['health']}")
