@@ -49,12 +49,12 @@ enemy_names = {
 enemy_stats = {
     "Uncle": {"dmg": (200, 300), "health": 600, "speed": 300, "MSP": 50},
     "Aunt": {"dmg": (300, 500), "health": 700, "speed": 1000, "MSP": 50},
-    "Dad": {"dmg": (200, 300), "health": 900, "speed": 100, "MSP": 50},
-    "Mom": {"dmg": (300, 400), "health": 100, "speed": 500, "MSP": 50},
+    "Dad": {"dmg": (200, 300), "health": 600, "speed": 100, "MSP": 50},
+    "Mom": {"dmg": (300, 400), "health": 700, "speed": 500, "MSP": 50},
     "Sissy Sister": {"dmg": (100, 200), "health": 800, "speed": 400, "MSP": 50},
-    "Annoying Cousin": {"dmg":(100, 300), "health": 400, "speed": 350, "MSP": 50},
-    "Grandpa": {"dmg": (150,250), "health": 250, "speed": 150, "MSP": 50},
-    "Nieces": {"dmg": (400, 450), "health": 500, "speed": 250, "MSP": 50},
+    "Annoying Cousin": {"dmg":(100, 300), "health": 800, "speed": 350, "MSP": 50},
+    "Grandpa": {"dmg": (150,250), "health": 650, "speed": 150, "MSP": 50},
+    "Nieces": {"dmg": (400, 450), "health": 700, "speed": 250, "MSP": 50},
     "Grandma": {"dmg":(400, 700), "health": 1000, "speed": 300, "MSP": 300}
 }
 
